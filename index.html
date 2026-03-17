@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -14,11 +15,9 @@
     --surface2: #242424;
     --surface3: #2e2e2e;
     --accent: #f5a623;
-    --accent2: #e8891a;
     --text: #f0ede8;
     --muted: #888;
     --danger: #e05c5c;
-    --success: #5cb88a;
     --border: #333;
     --radius: 12px;
   }
@@ -31,340 +30,216 @@
     padding-bottom: 100px;
   }
 
-  /* HEADER */
-  .header {
-    background: var(--bg);
-    padding: 52px 20px 16px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 28px;
-    letter-spacing: 2px;
-    color: var(--accent);
-    line-height: 1;
-  }
-  .logo span { color: var(--text); }
-  .header-total {
-    text-align: right;
-  }
-  .header-total .label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
-  .header-total .amount { font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: var(--accent); letter-spacing: 1px; }
+.header {
+background: var(–bg);
+padding: 52px 20px 16px;
+position: sticky;
+top: 0;
+z-index: 100;
+border-bottom: 1px solid var(–border);
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.logo { font-family: ‘Bebas Neue’, sans-serif; font-size: 28px; letter-spacing: 2px; color: var(–accent); line-height: 1; }
+.logo span { color: var(–text); }
+.header-total { text-align: right; }
+.header-total .label { font-size: 10px; color: var(–muted); text-transform: uppercase; letter-spacing: 1px; }
+.header-total .amount { font-family: ‘Bebas Neue’, sans-serif; font-size: 26px; color: var(–accent); letter-spacing: 1px; }
 
-  /* TABS */
-  .tabs {
-    display: flex;
-    background: var(--surface);
-    margin: 16px 16px 0;
-    border-radius: var(--radius);
-    padding: 4px;
-    gap: 4px;
-  }
-  .tab {
-    flex: 1;
-    padding: 10px 8px;
-    border: none;
-    background: transparent;
-    color: var(--muted);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    border-radius: 9px;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .tab.active {
-    background: var(--accent);
-    color: #000;
-    font-weight: 600;
-  }
+.tabs {
+display: flex;
+background: var(–surface);
+margin: 16px 16px 0;
+border-radius: var(–radius);
+padding: 4px;
+gap: 4px;
+}
+.tab {
+flex: 1;
+padding: 10px 4px;
+border: none;
+background: transparent;
+color: var(–muted);
+font-family: ‘DM Sans’, sans-serif;
+font-size: 12px;
+font-weight: 500;
+border-radius: 9px;
+cursor: pointer;
+transition: all 0.2s;
+}
+.tab.active { background: var(–accent); color: #000; font-weight: 600; }
 
-  /* SECTIONS */
-  .section { display: none; padding: 16px; }
-  .section.active { display: block; }
+.section { display: none; padding: 16px; }
+.section.active { display: block; }
 
-  /* CARDS */
-  .card {
-    background: var(--surface);
-    border-radius: var(--radius);
-    padding: 16px;
-    margin-bottom: 12px;
-    border: 1px solid var(--border);
-  }
-  .card-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    color: var(--muted);
-    text-transform: uppercase;
-    margin-bottom: 12px;
-  }
+.card {
+background: var(–surface);
+border-radius: var(–radius);
+padding: 16px;
+margin-bottom: 12px;
+border: 1px solid var(–border);
+}
+.card-title {
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 13px;
+letter-spacing: 1.5px;
+color: var(–muted);
+text-transform: uppercase;
+margin-bottom: 12px;
+}
 
-  /* INPUTS */
-  input, select, textarea {
-    width: 100%;
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 9px;
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    padding: 12px 14px;
-    outline: none;
-    -webkit-appearance: none;
-    transition: border-color 0.2s;
-  }
-  input:focus, select:focus, textarea:focus {
-    border-color: var(--accent);
-  }
-  input::placeholder { color: var(--muted); }
-  label {
-    display: block;
-    font-size: 12px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    margin-bottom: 6px;
-    font-weight: 500;
-  }
-  .field { margin-bottom: 12px; }
-  .field:last-child { margin-bottom: 0; }
-  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+input, select {
+width: 100%;
+background: var(–surface2);
+border: 1px solid var(–border);
+border-radius: 9px;
+color: var(–text);
+font-family: ‘DM Sans’, sans-serif;
+font-size: 15px;
+padding: 12px 14px;
+outline: none;
+-webkit-appearance: none;
+transition: border-color 0.2s;
+}
+input:focus, select:focus { border-color: var(–accent); }
+input::placeholder { color: var(–muted); }
+label {
+display: block;
+font-size: 12px;
+color: var(–muted);
+text-transform: uppercase;
+letter-spacing: 0.8px;
+margin-bottom: 6px;
+font-weight: 500;
+}
+.field { margin-bottom: 12px; }
+.field:last-child { margin-bottom: 0; }
 
-  /* BUTTONS */
-  .btn {
-    display: block;
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: var(--radius);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.15s;
-    text-decoration: none;
-  }
-  .btn:active { transform: scale(0.97); }
-  .btn-primary { background: var(--accent); color: #000; }
-  .btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
-  .btn-danger { background: transparent; color: var(--danger); border: 1px solid var(--danger); font-size: 13px; padding: 8px; }
-  .btn-sm { padding: 9px 14px; font-size: 13px; width: auto; display: inline-block; }
-  .btn-ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.btn {
+display: block;
+width: 100%;
+padding: 14px;
+border: none;
+border-radius: var(–radius);
+font-family: ‘DM Sans’, sans-serif;
+font-size: 15px;
+font-weight: 600;
+cursor: pointer;
+text-align: center;
+transition: all 0.15s;
+}
+.btn:active { transform: scale(0.97); }
+.btn-primary  { background: var(–accent); color: #000; }
+.btn-secondary{ background: var(–surface2); color: var(–text); border: 1px solid var(–border); }
+.btn-danger   { background: transparent; color: var(–danger); border: 1px solid var(–danger); font-size: 13px; padding: 8px 12px; }
+.btn-ghost    { background: transparent; color: var(–accent); border: 1px solid var(–accent); }
+.btn-green    { background: transparent; color: #5cb88a; border: 1px solid #5cb88a; font-size: 13px; padding: 8px 12px; }
+.btn-sm       { padding: 9px 14px; font-size: 13px; width: auto; display: inline-block; }
 
-  /* RETAILER LINKS */
-  .retailer-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-bottom: 12px;
-  }
-  .retailer-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    padding: 10px;
-    border-radius: 9px;
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    transition: opacity 0.15s;
-  }
-  .retailer-btn:active { opacity: 0.75; }
-  .btn-lowes { background: #003DA5; color: #fff; }
-  .btn-homedepot { background: #F96302; color: #fff; }
+.retailer-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 4px; }
+.retailer-btn {
+display: flex; align-items: center; justify-content: center; gap: 6px;
+padding: 10px; border-radius: 9px; font-size: 12px; font-weight: 600;
+cursor: pointer; border: none; transition: opacity 0.15s;
+}
+.retailer-btn:active { opacity: 0.75; }
+.btn-lowes     { background: #003DA5; color: #fff; }
+.btn-homedepot { background: #F96302; color: #fff; }
+.geo-note { font-size: 11px; color: var(–muted); text-align: center; margin-top: 4px; }
 
-  /* LINE ITEMS */
-  .line-item {
-    background: var(--surface2);
-    border-radius: 10px;
-    padding: 12px;
-    margin-bottom: 8px;
-    border: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .line-item-info { flex: 1; min-width: 0; }
-  .line-item-name {
-    font-weight: 600;
-    font-size: 14px;
-    margin-bottom: 2px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .line-item-detail { font-size: 12px; color: var(--muted); }
-  .line-item-price {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px;
-    color: var(--accent);
-    white-space: nowrap;
-  }
-  .line-item-actions { display: flex; flex-direction: column; gap: 4px; align-items: flex-end; }
+.line-item {
+background: var(–surface2);
+border-radius: 10px;
+padding: 12px;
+margin-bottom: 8px;
+border: 1px solid var(–border);
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+gap: 10px;
+}
+.line-item-info { flex: 1; min-width: 0; }
+.line-item-name { font-weight: 600; font-size: 14px; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.line-item-detail { font-size: 12px; color: var(–muted); margin-top: 4px; }
+.line-item-price { font-family: ‘Bebas Neue’, sans-serif; font-size: 20px; color: var(–accent); white-space: nowrap; }
+.line-item-actions { display: flex; flex-direction: column; gap: 4px; align-items: flex-end; }
 
-  /* SAVED ITEMS LIST */
-  .saved-item {
-    background: var(--surface2);
-    border-radius: 10px;
-    padding: 12px 14px;
-    margin-bottom: 8px;
-    border: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  .saved-item-info { flex: 1; min-width: 0; }
-  .saved-item-name { font-weight: 600; font-size: 14px; }
-  .saved-item-detail { font-size: 12px; color: var(--muted); margin-top: 2px; }
-  .saved-item-actions { display: flex; gap: 6px; }
+.saved-item {
+background: var(–surface2);
+border-radius: 10px;
+padding: 12px 14px;
+margin-bottom: 8px;
+border: 1px solid var(–border);
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 10px;
+}
+.saved-item-info { flex: 1; min-width: 0; }
+.saved-item-name { font-weight: 600; font-size: 14px; }
+.saved-item-detail { font-size: 12px; color: var(–muted); margin-top: 2px; }
+.saved-item-actions { display: flex; gap: 6px; flex-shrink: 0; }
 
-  /* ESTIMATE SUMMARY */
-  .summary-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 14px;
-  }
-  .summary-row:last-child { border-bottom: none; }
-  .summary-row.total {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
-    letter-spacing: 1px;
-    color: var(--accent);
-    padding-top: 14px;
-  }
-  .summary-label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; }
+.past-estimate {
+background: var(–surface2);
+border-radius: 10px;
+padding: 14px;
+margin-bottom: 10px;
+border: 1px solid var(–border);
+}
+.past-estimate-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; }
+.past-estimate-name { font-weight: 600; font-size: 15px; flex: 1; min-width: 0; padding-right: 10px; }
+.past-estimate-total { font-family: ‘Bebas Neue’, sans-serif; font-size: 22px; color: var(–accent); white-space: nowrap; }
+.past-estimate-meta { font-size: 12px; color: var(–muted); margin-bottom: 10px; }
+.past-estimate-actions { display: flex; gap: 8px; }
 
-  /* MARKUP SLIDER */
-  .markup-display {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 40px;
-    color: var(--accent);
-    text-align: center;
-    line-height: 1;
-    margin: 8px 0;
-  }
-  input[type=range] {
-    -webkit-appearance: none;
-    background: var(--surface3);
-    height: 6px;
-    border-radius: 3px;
-    padding: 0;
-    border: none;
-  }
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: var(--accent);
-    cursor: pointer;
-  }
+.summary-row {
+display: flex; justify-content: space-between; align-items: center;
+padding: 10px 0; border-bottom: 1px solid var(–border); font-size: 14px;
+}
+.summary-row:last-child { border-bottom: none; }
+.summary-row.total { font-family: ‘Bebas Neue’, sans-serif; font-size: 22px; letter-spacing: 1px; color: var(–accent); padding-top: 14px; }
+.summary-label { color: var(–muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; }
 
-  /* EMPTY STATE */
-  .empty {
-    text-align: center;
-    padding: 40px 20px;
-    color: var(--muted);
-  }
-  .empty-icon { font-size: 40px; margin-bottom: 10px; }
-  .empty-text { font-size: 14px; }
+.markup-display { font-family: ‘Bebas Neue’, sans-serif; font-size: 40px; color: var(–accent); text-align: center; line-height: 1; margin: 8px 0; }
+input[type=range] { -webkit-appearance: none; background: var(–surface3); height: 6px; border-radius: 3px; padding: 0; border: none; }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50%; background: var(–accent); cursor: pointer; }
 
-  /* MODAL */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.7);
-    z-index: 200;
-    align-items: flex-end;
-  }
-  .modal-overlay.open { display: flex; }
-  .modal {
-    background: var(--surface);
-    border-radius: 20px 20px 0 0;
-    padding: 20px 20px 40px;
-    width: 100%;
-    max-height: 90dvh;
-    overflow-y: auto;
-    border-top: 1px solid var(--border);
-  }
-  .modal-handle {
-    width: 36px; height: 4px;
-    background: var(--border);
-    border-radius: 2px;
-    margin: 0 auto 18px;
-  }
-  .modal-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
-  }
+.empty { text-align: center; padding: 40px 20px; color: var(–muted); }
+.empty-icon { font-size: 40px; margin-bottom: 10px; }
+.empty-text { font-size: 14px; }
 
-  /* BADGE */
-  .badge {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .badge-labor { background: #1e3a5f; color: #7eb8f7; }
-  .badge-material { background: #2d2010; color: var(--accent); }
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75); z-index: 200; align-items: flex-end; }
+.modal-overlay.open { display: flex; }
+.modal { background: var(–surface); border-radius: 20px 20px 0 0; padding: 20px 20px 40px; width: 100%; max-height: 90dvh; overflow-y: auto; border-top: 1px solid var(–border); }
+.modal-handle { width: 36px; height: 4px; background: var(–border); border-radius: 2px; margin: 0 auto 18px; }
+.modal-title { font-family: ‘Bebas Neue’, sans-serif; font-size: 22px; letter-spacing: 1px; margin-bottom: 16px; }
 
-  /* DIVIDER */
-  .divider { height: 1px; background: var(--border); margin: 16px 0; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.badge-labor    { background: #1e3a5f; color: #7eb8f7; }
+.badge-material { background: #2d2010; color: var(–accent); }
 
-  /* ESTIMATE NAME INPUT */
-  .estimate-name-bar {
-    background: var(--surface);
-    border-radius: var(--radius);
-    padding: 12px 14px;
-    margin-bottom: 12px;
-    border: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .estimate-name-bar input {
-    background: transparent;
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 0;
-  }
-  .estimate-name-bar .icon { color: var(--accent); font-size: 18px; }
+.estimate-name-bar {
+background: var(–surface); border-radius: var(–radius);
+padding: 12px 14px; margin-bottom: 12px; border: 1px solid var(–border);
+display: flex; align-items: center; gap: 10px;
+}
+.estimate-name-bar input { background: transparent; border: none; font-size: 16px; font-weight: 600; padding: 0; }
+.estimate-name-bar .icon { color: var(–accent); font-size: 18px; flex-shrink: 0; }
 
-  .tag { font-size: 11px; color: var(--muted); background: var(--surface3); border-radius: 5px; padding: 2px 7px; }
+.tag { font-size: 11px; color: var(–muted); background: var(–surface3); border-radius: 5px; padding: 2px 7px; }
+.section-header { font-family: ‘Bebas Neue’, sans-serif; font-size: 16px; letter-spacing: 2px; color: var(–muted); text-transform: uppercase; margin: 16px 0 8px; }
 
-  .section-header {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 16px;
-    letter-spacing: 2px;
-    color: var(--muted);
-    text-transform: uppercase;
-    margin: 16px 0 8px;
-  }
+.toast {
+position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(20px);
+background: #5cb88a; color: #000; font-weight: 600; font-size: 13px;
+padding: 10px 20px; border-radius: 30px; z-index: 999;
+opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 </style>
+
 </head>
 <body>
 
@@ -377,70 +252,74 @@
 </div>
 
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('estimate')">Estimate</button>
-  <button class="tab" onclick="switchTab('saved')">Saved Items</button>
-  <button class="tab" onclick="switchTab('summary')">Summary</button>
+  <button class="tab active" onclick="switchTab('estimate', this)">Estimate</button>
+  <button class="tab" onclick="switchTab('library', this)">Library</button>
+  <button class="tab" onclick="switchTab('summary', this)">Summary</button>
+  <button class="tab" onclick="switchTab('history', this)">History</button>
 </div>
 
-<!-- ===================== ESTIMATE TAB ===================== -->
+<!-- ESTIMATE TAB -->
+
 <div id="tab-estimate" class="section active">
 
   <div class="estimate-name-bar">
     <span class="icon">📋</span>
-    <input type="text" id="estimate-name" placeholder="Estimate name / customer..." />
+    <input type="text" id="estimate-name" placeholder="Customer / job name..." />
   </div>
 
-  <!-- ADD ITEM -->
   <div class="card">
     <div class="card-title">Add Line Item</div>
 
-    <div class="field">
-      <label>Item Name</label>
-      <input type="text" id="item-name" placeholder="e.g. Install 20A outlet" />
-    </div>
+```
+<div class="field">
+  <label>Item Name</label>
+  <input type="text" id="item-name" placeholder="e.g. Install 20A outlet" />
+</div>
 
-    <div class="field">
-      <label>Type</label>
-      <select id="item-type">
-        <option value="both">Labor + Material</option>
-        <option value="labor">Labor Only</option>
-        <option value="material">Material Only</option>
-      </select>
-    </div>
+<div class="field">
+  <label>Type</label>
+  <select id="item-type" onchange="toggleFields()">
+    <option value="both">Labor + Material</option>
+    <option value="labor">Labor Only</option>
+    <option value="material">Material Only</option>
+  </select>
+</div>
 
-    <div id="labor-fields">
-      <div class="field">
-        <label>Labor Cost ($)</label>
-        <input type="number" id="item-labor" placeholder="0.00" inputmode="decimal" step="0.01" min="0" />
-      </div>
-    </div>
+<div id="labor-fields">
+  <div class="field">
+    <label>Labor Cost ($)</label>
+    <input type="number" id="item-labor" placeholder="0.00" inputmode="decimal" step="0.01" min="0" />
+  </div>
+</div>
 
-    <div id="material-fields">
-      <div class="field">
-        <label>Material Cost ($)</label>
-        <input type="number" id="item-material" placeholder="0.00" inputmode="decimal" step="0.01" />
-      </div>
-      <div class="field">
-        <label>Search for price</label>
-        <div class="retailer-row" id="search-retailer-row">
-          <button class="retailer-btn btn-lowes" onclick="searchRetailer('lowes')">🔵 Lowe's</button>
-          <button class="retailer-btn btn-homedepot" onclick="searchRetailer('homedepot')">🟠 Home Depot</button>
-        </div>
-      </div>
+<div id="material-fields">
+  <div class="field">
+    <label>Material Cost ($)</label>
+    <input type="number" id="item-material" placeholder="0.00" inputmode="decimal" step="0.01" min="0" />
+  </div>
+  <div class="field">
+    <label>Find price at</label>
+    <div class="retailer-row">
+      <button class="retailer-btn btn-lowes" onclick="searchRetailer('lowes')">🔵 Lowe's</button>
+      <button class="retailer-btn btn-homedepot" onclick="searchRetailer('homedepot')">🟠 Home Depot</button>
     </div>
+    <div class="geo-note" id="geo-note">📍 Locating nearest store...</div>
+  </div>
+</div>
 
-    <div class="field">
-      <label>Qty</label>
-      <input type="number" id="item-qty" value="1" min="1" inputmode="numeric" />
-    </div>
+<div class="field">
+  <label>Qty</label>
+  <input type="number" id="item-qty" value="1" min="1" inputmode="numeric" />
+</div>
 
-    <div style="display:flex; gap:8px; margin-top:4px;">
-      <button class="btn btn-primary" style="flex:1" onclick="addItem()">＋ Add to Estimate</button>
-      <button class="btn btn-secondary btn-sm" onclick="saveItemToLibrary()">💾 Save</button>
-    </div>
+<div style="display:flex; gap:8px; margin-top:4px;">
+  <button class="btn btn-primary" style="flex:1" onclick="addItem()">＋ Add to Estimate</button>
+  <button class="btn btn-secondary btn-sm" onclick="saveItemToLibrary()">💾 Save</button>
+</div>
+```
+
   </div>
 
-  <!-- CURRENT LINE ITEMS -->
   <div class="section-header">Line Items</div>
   <div id="line-items-list">
     <div class="empty">
@@ -449,12 +328,10 @@
     </div>
   </div>
 
-  <!-- MARKUP -->
   <div class="card" style="margin-top:4px;">
     <div class="card-title">Markup</div>
     <div class="markup-display" id="markup-display">20%</div>
-    <input type="range" id="markup-slider" min="0" max="100" value="20" step="1"
-      oninput="updateMarkup(this.value)" />
+    <input type="range" id="markup-slider" min="0" max="100" value="20" step="1" oninput="updateMarkup(this.value)" />
     <div style="display:flex; justify-content:space-between; font-size:11px; color:var(--muted); margin-top:4px;">
       <span>0%</span><span>50%</span><span>100%</span>
     </div>
@@ -462,21 +339,18 @@
 
 </div>
 
-<!-- ===================== SAVED ITEMS TAB ===================== -->
-<div id="tab-saved" class="section">
+<!-- LIBRARY TAB -->
+
+<div id="tab-library" class="section">
   <div class="card">
-    <div class="card-title">Your Saved Items</div>
-    <p style="font-size:13px; color:var(--muted); margin-bottom:12px;">Build a library of your common tasks. Tap "Use" to instantly add to the current estimate.</p>
+    <div class="card-title">Your Item Library</div>
+    <p style="font-size:13px; color:var(--muted);">Saved tasks for quick reuse. Tap "Use" to add to the current estimate.</p>
   </div>
-  <div id="saved-items-list">
-    <div class="empty">
-      <div class="empty-icon">📦</div>
-      <div class="empty-text">No saved items yet.<br>Add items from the Estimate tab and tap 💾 Save.</div>
-    </div>
-  </div>
+  <div id="saved-items-list"></div>
 </div>
 
-<!-- ===================== SUMMARY TAB ===================== -->
+<!-- SUMMARY TAB -->
+
 <div id="tab-summary" class="section">
   <div class="card">
     <div class="card-title">Estimate Summary</div>
@@ -511,10 +385,24 @@
     </div>
   </div>
 
-  <button class="btn btn-ghost" onclick="clearEstimate()">🗑 Clear Estimate</button>
+  <div style="display:flex; gap:8px; margin-bottom:12px;">
+    <button class="btn btn-primary" style="flex:1" onclick="saveEstimate()">💾 Save Estimate</button>
+    <button class="btn btn-ghost btn-sm" onclick="clearEstimate()">🗑 Clear</button>
+  </div>
 </div>
 
-<!-- ===================== ADD FROM SAVED MODAL ===================== -->
+<!-- HISTORY TAB -->
+
+<div id="tab-history" class="section">
+  <div class="card">
+    <div class="card-title">Saved Estimates</div>
+    <p style="font-size:13px; color:var(--muted);">Tap View to see the full breakdown, or Load to bring it back into the estimate.</p>
+  </div>
+  <div id="history-list"></div>
+</div>
+
+<!-- USE SAVED MODAL -->
+
 <div class="modal-overlay" id="saved-modal">
   <div class="modal">
     <div class="modal-handle"></div>
@@ -531,247 +419,388 @@
   </div>
 </div>
 
+<!-- VIEW HISTORY MODAL -->
+
+<div class="modal-overlay" id="history-modal">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <div class="modal-title" id="hmodal-name">Estimate</div>
+    <div style="font-size:12px; color:var(--muted); margin-bottom:14px;" id="hmodal-date"></div>
+    <div id="hmodal-items"></div>
+    <div style="height:1px; background:var(--border); margin:14px 0;"></div>
+    <div id="hmodal-totals"></div>
+    <div style="display:flex; gap:8px; margin-top:16px;">
+      <button class="btn btn-primary" style="flex:1" onclick="loadHistoryEstimate()">Load into Estimate</button>
+      <button class="btn btn-secondary btn-sm" onclick="closeHistoryModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
 <script>
-let lineItems = [];
-let savedItems = JSON.parse(localStorage.getItem('volt_saved') || '[]');
-let markup = 20;
-let selectedSavedItem = null;
+  let lineItems = [];
+  let savedItems     = JSON.parse(localStorage.getItem('volt_saved')     || '[]');
+  let savedEstimates = JSON.parse(localStorage.getItem('volt_estimates') || '[]');
+  let markup = 20;
+  let selectedSavedItem = null;
+  let selectedHistoryEstimate = null;
+  let userCoords = null;
 
-// ---- TABS ----
-function switchTab(name) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.getElementById('tab-' + name).classList.add('active');
-  event.target.classList.add('active');
-  if (name === 'summary') renderSummary();
-  if (name === 'saved') renderSavedList();
-}
-
-// ---- TYPE TOGGLE ----
-document.getElementById('item-type').addEventListener('change', function() {
-  const v = this.value;
-  document.getElementById('labor-fields').style.display = v === 'material' ? 'none' : 'block';
-  document.getElementById('material-fields').style.display = v === 'labor' ? 'none' : 'block';
-});
-
-// ---- RETAILER SEARCH ----
-function searchRetailer(store) {
-  const name = document.getElementById('item-name').value.trim() || 'electrical supplies';
-  const q = encodeURIComponent(name);
-  const urls = {
-    lowes: `https://www.lowes.com/search?searchTerm=${q}`,
-    homedepot: `https://www.homedepot.com/s/${q}`
-  };
-  window.open(urls[store], '_blank');
-}
-
-// ---- MARKUP ----
-function updateMarkup(v) {
-  markup = parseInt(v);
-  document.getElementById('markup-display').textContent = markup + '%';
-  updateHeaderTotal();
-}
-
-// ---- ADD ITEM ----
-function addItem(overrides) {
-  const name = overrides?.name || document.getElementById('item-name').value.trim();
-  const type = overrides?.type || document.getElementById('item-type').value;
-  const labor = parseFloat(overrides?.labor ?? document.getElementById('item-labor').value) || 0;
-  const material = parseFloat(overrides?.material || document.getElementById('item-material').value) || 0;
-  const qty = parseInt(overrides?.qty || document.getElementById('item-qty').value) || 1;
-
-  if (!name) { alert('Please enter an item name.'); return; }
-
-  const laborCost = (type !== 'material') ? labor : 0;
-  const mat = (type !== 'labor') ? material : 0;
-  const lineTotal = (laborCost + mat) * qty;
-
-  lineItems.push({ id: Date.now(), name, type, labor: laborCost, material: mat, qty, lineTotal });
-  renderLineItems();
-  updateHeaderTotal();
-
-  if (!overrides) {
-    document.getElementById('item-name').value = '';
-    document.getElementById('item-labor').value = '';
-    document.getElementById('item-material').value = '';
-    document.getElementById('item-qty').value = '1';
-  }
-}
-
-// ---- REMOVE ITEM ----
-function removeItem(id) {
-  lineItems = lineItems.filter(i => i.id !== id);
-  renderLineItems();
-  updateHeaderTotal();
-}
-
-// ---- SAVE ITEM ----
-function saveItemToLibrary() {
-  const name = document.getElementById('item-name').value.trim();
-  const type = document.getElementById('item-type').value;
-  const labor = parseFloat(document.getElementById('item-labor').value) || 0;
-  const material = parseFloat(document.getElementById('item-material').value) || 0;
-
-  if (!name) { alert('Enter an item name to save.'); return; }
-  if (savedItems.find(s => s.name.toLowerCase() === name.toLowerCase())) {
-    alert('An item with this name is already saved.'); return;
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2500);
   }
 
-  savedItems.push({ id: Date.now(), name, type, labor, material });
-  localStorage.setItem('volt_saved', JSON.stringify(savedItems));
-  renderSavedList();
-  alert(`"${name}" saved to your library!`);
-}
-
-// ---- DELETE SAVED ----
-function deleteSaved(id) {
-  savedItems = savedItems.filter(s => s.id !== id);
-  localStorage.setItem('volt_saved', JSON.stringify(savedItems));
-  renderSavedList();
-}
-
-// ---- USE SAVED (MODAL) ----
-function useSavedItem(id) {
-  selectedSavedItem = savedItems.find(s => s.id === id);
-  if (!selectedSavedItem) return;
-  const { name, type, labor, material } = selectedSavedItem;
-  const laborLine = type !== 'material' ? `Labor: $${labor.toFixed(2)}` : '';
-  const matLine = type !== 'labor' ? `Materials: $${material.toFixed(2)}` : '';
-  document.getElementById('modal-item-detail').innerHTML = `
-    <div style="font-weight:600;font-size:16px;margin-bottom:6px;">${name}</div>
-    <div style="font-size:13px;color:var(--muted);">${[laborLine, matLine].filter(Boolean).join(' &nbsp;·&nbsp; ')}</div>
-  `;
-  document.getElementById('modal-qty').value = '1';
-  document.getElementById('saved-modal').classList.add('open');
-}
-
-function confirmAddSaved() {
-  if (!selectedSavedItem) return;
-  const qty = parseInt(document.getElementById('modal-qty').value) || 1;
-  addItem({ ...selectedSavedItem, qty });
-  closeSavedModal();
-  switchTabDirect('estimate');
-}
-
-function closeSavedModal() {
-  document.getElementById('saved-modal').classList.remove('open');
-  selectedSavedItem = null;
-}
-
-function switchTabDirect(name) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.getElementById('tab-' + name).classList.add('active');
-  document.querySelectorAll('.tab')[0].classList.add('active');
-}
-
-// ---- RENDER LINE ITEMS ----
-function renderLineItems() {
-  const el = document.getElementById('line-items-list');
-  if (lineItems.length === 0) {
-    el.innerHTML = `<div class="empty"><div class="empty-icon">🔌</div><div class="empty-text">No items yet.</div></div>`;
-    return;
+  // GEOLOCATION
+  function initGeolocation() {
+    const note = document.getElementById('geo-note');
+    if (!navigator.geolocation) { note.textContent = '📍 Geolocation not available'; return; }
+    navigator.geolocation.getCurrentPosition(
+      pos => {
+        userCoords = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+        note.textContent = '📍 Using your location for nearest store';
+      },
+      () => { note.textContent = '📍 Enable location to find nearest store'; },
+      { timeout: 8000 }
+    );
   }
-  el.innerHTML = lineItems.map(item => {
-    const badge = item.type === 'labor' ? '<span class="badge badge-labor">Labor</span>'
-      : item.type === 'material' ? '<span class="badge badge-material">Material</span>'
-      : '<span class="badge badge-labor">Labor</span><span class="badge badge-material" style="margin-left:4px;">Material</span>';
-    const detail = [];
-    if (item.type !== 'material' && item.labor > 0) detail.push(`Labor: $${item.labor.toFixed(2)}`);
-    if (item.type !== 'labor' && item.material > 0) detail.push(`Mat: $${item.material.toFixed(2)}`);
-    if (item.qty > 1) detail.push(`×${item.qty}`);
-    return `
-    <div class="line-item">
-      <div class="line-item-info">
-        <div class="line-item-name">${item.name}</div>
-        <div style="margin:4px 0;">${badge}</div>
-        <div class="line-item-detail">${detail.join(' · ')}</div>
-      </div>
-      <div class="line-item-actions">
-        <div class="line-item-price">$${item.lineTotal.toFixed(2)}</div>
-        <button class="btn btn-danger btn-sm" onclick="removeItem(${item.id})">Remove</button>
-      </div>
-    </div>`;
-  }).join('');
-}
 
-// ---- RENDER SAVED LIST ----
-function renderSavedList() {
-  const el = document.getElementById('saved-items-list');
-  if (savedItems.length === 0) {
-    el.innerHTML = `<div class="empty"><div class="empty-icon">📦</div><div class="empty-text">No saved items yet.<br>Add items from the Estimate tab and tap 💾 Save.</div></div>`;
-    return;
+  function searchRetailer(store) {
+    const name = document.getElementById('item-name').value.trim() || 'electrical supplies';
+    const q = encodeURIComponent(name);
+    if (userCoords) {
+      const { lat, lng } = userCoords;
+      if (store === 'lowes') {
+        window.open(`https://www.lowes.com/store/search?lat=${lat}&lng=${lng}`, '_blank');
+        setTimeout(() => window.open(`https://www.lowes.com/search?searchTerm=${q}`, '_blank'), 700);
+      } else {
+        window.open(`https://www.homedepot.com/l/search#?latlng=${lat},${lng}`, '_blank');
+        setTimeout(() => window.open(`https://www.homedepot.com/s/${q}`, '_blank'), 700);
+      }
+    } else {
+      const urls = { lowes: `https://www.lowes.com/search?searchTerm=${q}`, homedepot: `https://www.homedepot.com/s/${q}` };
+      window.open(urls[store], '_blank');
+    }
   }
-  el.innerHTML = savedItems.map(item => {
-    const detail = [];
-    if (item.type !== 'material' && item.labor) detail.push(`Labor: $${item.labor.toFixed(2)}`);
-    if (item.type !== 'labor' && item.material) detail.push(`Mat: $${item.material.toFixed(2)}`);
-    const typeLabel = item.type === 'labor' ? 'Labor' : item.type === 'material' ? 'Material' : 'L+M';
-    return `
-    <div class="saved-item">
-      <div class="saved-item-info">
-        <div class="saved-item-name">${item.name} <span class="tag">${typeLabel}</span></div>
-        <div class="saved-item-detail">${detail.join(' · ') || 'No details'}</div>
-      </div>
-      <div class="saved-item-actions">
-        <button class="btn btn-primary btn-sm" onclick="useSavedItem(${item.id})">Use</button>
-        <button class="btn btn-danger btn-sm" onclick="deleteSaved(${item.id})">✕</button>
-      </div>
-    </div>`;
-  }).join('');
-}
 
-// ---- RENDER SUMMARY ----
-function renderSummary() {
-  const customer = document.getElementById('estimate-name').value || 'Unnamed Estimate';
-  document.getElementById('summary-customer').textContent = customer;
-  document.getElementById('summary-date').textContent = new Date().toLocaleDateString('en-US', {weekday:'long', year:'numeric', month:'long', day:'numeric'});
+  // TABS
+  function switchTab(name, el) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + name).classList.add('active');
+    if (el) el.classList.add('active');
+    if (name === 'summary') renderSummary();
+    if (name === 'library') renderSavedList();
+    if (name === 'history') renderHistory();
+  }
 
-  let laborTotal = 0, materialTotal = 0;
-  const lineEl = document.getElementById('summary-line-items');
+  function switchTabDirect(name) {
+    const tabNames = ['estimate', 'library', 'summary', 'history'];
+    switchTab(name, document.querySelectorAll('.tab')[tabNames.indexOf(name)]);
+  }
 
-  if (lineItems.length === 0) {
-    lineEl.innerHTML = `<div class="empty" style="padding:20px 0;"><div class="empty-text">No line items added yet.</div></div>`;
-  } else {
-    lineEl.innerHTML = lineItems.map(item => {
-      laborTotal += item.labor * item.qty;
-      materialTotal += item.material * item.qty;
-      return `<div class="summary-row"><span>${item.qty > 1 ? item.qty + '× ' : ''}${item.name}</span><span>$${item.lineTotal.toFixed(2)}</span></div>`;
+  // TYPE TOGGLE
+  function toggleFields() {
+    const v = document.getElementById('item-type').value;
+    document.getElementById('labor-fields').style.display    = v === 'material' ? 'none' : 'block';
+    document.getElementById('material-fields').style.display = v === 'labor'    ? 'none' : 'block';
+  }
+
+  // MARKUP
+  function updateMarkup(v) {
+    markup = parseInt(v);
+    document.getElementById('markup-display').textContent = markup + '%';
+    updateHeaderTotal();
+  }
+
+  // ADD ITEM
+  function addItem(overrides) {
+    const name     = overrides?.name     || document.getElementById('item-name').value.trim();
+    const type     = overrides?.type     || document.getElementById('item-type').value;
+    const labor    = parseFloat(overrides?.labor    ?? document.getElementById('item-labor').value)    || 0;
+    const material = parseFloat(overrides?.material ?? document.getElementById('item-material').value) || 0;
+    const qty      = parseInt(overrides?.qty         || document.getElementById('item-qty').value)     || 1;
+
+    if (!name) { alert('Please enter an item name.'); return; }
+
+    const laborCost = type !== 'material' ? labor    : 0;
+    const matCost   = type !== 'labor'    ? material : 0;
+    const lineTotal = (laborCost + matCost) * qty;
+
+    lineItems.push({ id: Date.now(), name, type, labor: laborCost, material: matCost, qty, lineTotal });
+    renderLineItems();
+    updateHeaderTotal();
+
+    if (!overrides) {
+      document.getElementById('item-name').value     = '';
+      document.getElementById('item-labor').value    = '';
+      document.getElementById('item-material').value = '';
+      document.getElementById('item-qty').value      = '1';
+    }
+  }
+
+  // REMOVE ITEM
+  function removeItem(id) {
+    lineItems = lineItems.filter(i => i.id !== id);
+    renderLineItems();
+    updateHeaderTotal();
+  }
+
+  // SAVE TO LIBRARY
+  function saveItemToLibrary() {
+    const name     = document.getElementById('item-name').value.trim();
+    const type     = document.getElementById('item-type').value;
+    const labor    = parseFloat(document.getElementById('item-labor').value)    || 0;
+    const material = parseFloat(document.getElementById('item-material').value) || 0;
+    if (!name) { alert('Enter an item name to save.'); return; }
+    if (savedItems.find(s => s.name.toLowerCase() === name.toLowerCase())) { alert('Already saved.'); return; }
+    savedItems.push({ id: Date.now(), name, type, labor, material });
+    localStorage.setItem('volt_saved', JSON.stringify(savedItems));
+    showToast(`"${name}" saved to library!`);
+  }
+
+  function deleteSaved(id) {
+    savedItems = savedItems.filter(s => s.id !== id);
+    localStorage.setItem('volt_saved', JSON.stringify(savedItems));
+    renderSavedList();
+  }
+
+  // USE SAVED MODAL
+  function useSavedItem(id) {
+    selectedSavedItem = savedItems.find(s => s.id === id);
+    if (!selectedSavedItem) return;
+    const { name, type, labor, material } = selectedSavedItem;
+    const parts = [];
+    if (type !== 'material' && labor)    parts.push(`Labor: $${labor.toFixed(2)}`);
+    if (type !== 'labor'    && material) parts.push(`Mat: $${material.toFixed(2)}`);
+    document.getElementById('modal-item-detail').innerHTML = `
+      <div style="font-weight:600;font-size:16px;margin-bottom:6px;">${name}</div>
+      <div style="font-size:13px;color:var(--muted);">${parts.join(' · ') || 'No cost details'}</div>`;
+    document.getElementById('modal-qty').value = '1';
+    document.getElementById('saved-modal').classList.add('open');
+  }
+
+  function confirmAddSaved() {
+    if (!selectedSavedItem) return;
+    addItem({ ...selectedSavedItem, qty: parseInt(document.getElementById('modal-qty').value) || 1 });
+    closeSavedModal();
+    switchTabDirect('estimate');
+  }
+
+  function closeSavedModal() {
+    document.getElementById('saved-modal').classList.remove('open');
+    selectedSavedItem = null;
+  }
+
+  // SAVE ESTIMATE
+  function saveEstimate() {
+    if (lineItems.length === 0) { alert('Add at least one line item before saving.'); return; }
+    const name = document.getElementById('estimate-name').value.trim() || 'Unnamed Estimate';
+    const subtotal  = lineItems.reduce((s, i) => s + i.lineTotal, 0);
+    const markupAmt = subtotal * (markup / 100);
+    savedEstimates.unshift({
+      id: Date.now(), name,
+      date: new Date().toISOString(),
+      lineItems: JSON.parse(JSON.stringify(lineItems)),
+      markup, subtotal,
+      markupAmt,
+      total: subtotal + markupAmt
+    });
+    localStorage.setItem('volt_estimates', JSON.stringify(savedEstimates));
+    showToast('Estimate saved!');
+  }
+
+  function deleteEstimate(id) {
+    if (!confirm('Delete this saved estimate?')) return;
+    savedEstimates = savedEstimates.filter(e => e.id !== id);
+    localStorage.setItem('volt_estimates', JSON.stringify(savedEstimates));
+    renderHistory();
+  }
+
+  // VIEW HISTORY MODAL
+  function viewEstimate(id) {
+    selectedHistoryEstimate = savedEstimates.find(e => e.id === id);
+    if (!selectedHistoryEstimate) return;
+    const e = selectedHistoryEstimate;
+    document.getElementById('hmodal-name').textContent = e.name;
+    document.getElementById('hmodal-date').textContent = new Date(e.date).toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+    document.getElementById('hmodal-items').innerHTML = e.lineItems.map(item =>
+      `<div class="summary-row">
+        <span>${item.qty > 1 ? item.qty + '× ' : ''}${item.name}</span>
+        <span>$${item.lineTotal.toFixed(2)}</span>
+      </div>`).join('');
+    const laborTotal = e.lineItems.reduce((s, i) => s + i.labor * i.qty, 0);
+    const matTotal   = e.lineItems.reduce((s, i) => s + i.material * i.qty, 0);
+    document.getElementById('hmodal-totals').innerHTML = `
+      <div class="summary-row"><span class="summary-label">Labor</span><span>$${laborTotal.toFixed(2)}</span></div>
+      <div class="summary-row"><span class="summary-label">Materials</span><span>$${matTotal.toFixed(2)}</span></div>
+      <div class="summary-row"><span class="summary-label">Subtotal</span><span>$${e.subtotal.toFixed(2)}</span></div>
+      <div class="summary-row"><span class="summary-label">Markup (${e.markup}%)</span><span>$${e.markupAmt.toFixed(2)}</span></div>
+      <div class="summary-row total"><span>TOTAL</span><span>$${e.total.toFixed(2)}</span></div>`;
+    document.getElementById('history-modal').classList.add('open');
+  }
+
+  function loadHistoryEstimate() {
+    if (!selectedHistoryEstimate) return;
+    if (!confirm('This will replace your current estimate. Continue?')) return;
+    const e = selectedHistoryEstimate;
+    lineItems = JSON.parse(JSON.stringify(e.lineItems));
+    markup = e.markup;
+    document.getElementById('estimate-name').value    = e.name;
+    document.getElementById('markup-slider').value    = markup;
+    document.getElementById('markup-display').textContent = markup + '%';
+    renderLineItems();
+    updateHeaderTotal();
+    closeHistoryModal();
+    switchTabDirect('estimate');
+    showToast('Estimate loaded!');
+  }
+
+  function loadAndGoToEstimate(id) {
+    selectedHistoryEstimate = savedEstimates.find(e => e.id === id);
+    if (selectedHistoryEstimate) loadHistoryEstimate();
+  }
+
+  function closeHistoryModal() {
+    document.getElementById('history-modal').classList.remove('open');
+    selectedHistoryEstimate = null;
+  }
+
+  // RENDER LINE ITEMS
+  // Only qty shown in detail — NO labor or material cost breakdown on the card
+  function renderLineItems() {
+    const el = document.getElementById('line-items-list');
+    if (lineItems.length === 0) {
+      el.innerHTML = `<div class="empty"><div class="empty-icon">🔌</div><div class="empty-text">No items yet.</div></div>`;
+      return;
+    }
+    el.innerHTML = lineItems.map(item => {
+      const badge = item.type === 'labor'
+        ? '<span class="badge badge-labor">Labor</span>'
+        : item.type === 'material'
+          ? '<span class="badge badge-material">Material</span>'
+          : '<span class="badge badge-labor">Labor</span><span class="badge badge-material" style="margin-left:4px;">Material</span>';
+      const qtyLine = item.qty > 1 ? `<div class="line-item-detail">Qty: ${item.qty}</div>` : '';
+      return `
+      <div class="line-item">
+        <div class="line-item-info">
+          <div class="line-item-name">${item.name}</div>
+          <div style="margin:4px 0;">${badge}</div>
+          ${qtyLine}
+        </div>
+        <div class="line-item-actions">
+          <div class="line-item-price">$${item.lineTotal.toFixed(2)}</div>
+          <button class="btn btn-danger btn-sm" onclick="removeItem(${item.id})">Remove</button>
+        </div>
+      </div>`;
     }).join('');
   }
 
-  const subtotal = laborTotal + materialTotal;
-  const markupAmt = subtotal * (markup / 100);
-  const total = subtotal + markupAmt;
+  // RENDER LIBRARY
+  function renderSavedList() {
+    const el = document.getElementById('saved-items-list');
+    if (savedItems.length === 0) {
+      el.innerHTML = `<div class="empty"><div class="empty-icon">📦</div><div class="empty-text">No saved items yet.<br>Build an item in the Estimate tab and tap 💾 Save.</div></div>`;
+      return;
+    }
+    el.innerHTML = savedItems.map(item => {
+      const detail = [];
+      if (item.type !== 'material' && item.labor)    detail.push(`Labor: $${item.labor.toFixed(2)}`);
+      if (item.type !== 'labor'    && item.material) detail.push(`Mat: $${item.material.toFixed(2)}`);
+      const typeLabel = item.type === 'labor' ? 'Labor' : item.type === 'material' ? 'Material' : 'L+M';
+      return `
+      <div class="saved-item">
+        <div class="saved-item-info">
+          <div class="saved-item-name">${item.name} <span class="tag">${typeLabel}</span></div>
+          <div class="saved-item-detail">${detail.join(' · ') || 'No details'}</div>
+        </div>
+        <div class="saved-item-actions">
+          <button class="btn btn-primary btn-sm" onclick="useSavedItem(${item.id})">Use</button>
+          <button class="btn btn-danger btn-sm" onclick="deleteSaved(${item.id})">✕</button>
+        </div>
+      </div>`;
+    }).join('');
+  }
 
-  document.getElementById('sum-labor').textContent = '$' + laborTotal.toFixed(2);
-  document.getElementById('sum-materials').textContent = '$' + materialTotal.toFixed(2);
-  document.getElementById('sum-subtotal').textContent = '$' + subtotal.toFixed(2);
-  document.getElementById('sum-markup-pct').textContent = markup;
-  document.getElementById('sum-markup').textContent = '$' + markupAmt.toFixed(2);
-  document.getElementById('sum-total').textContent = '$' + total.toFixed(2);
-}
+  // RENDER HISTORY
+  function renderHistory() {
+    const el = document.getElementById('history-list');
+    if (savedEstimates.length === 0) {
+      el.innerHTML = `<div class="empty"><div class="empty-icon">🗂️</div><div class="empty-text">No saved estimates yet.<br>Go to Summary and tap "Save Estimate".</div></div>`;
+      return;
+    }
+    el.innerHTML = savedEstimates.map(e => {
+      const dateStr = new Date(e.date).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
+      const n = e.lineItems.length;
+      return `
+      <div class="past-estimate">
+        <div class="past-estimate-header">
+          <div class="past-estimate-name">${e.name}</div>
+          <div class="past-estimate-total">$${e.total.toFixed(2)}</div>
+        </div>
+        <div class="past-estimate-meta">${dateStr} &nbsp;·&nbsp; ${n} item${n !== 1 ? 's' : ''} &nbsp;·&nbsp; ${e.markup}% markup</div>
+        <div class="past-estimate-actions">
+          <button class="btn btn-primary btn-sm" onclick="viewEstimate(${e.id})">View</button>
+          <button class="btn btn-green btn-sm" onclick="loadAndGoToEstimate(${e.id})">Load</button>
+          <button class="btn btn-danger btn-sm" onclick="deleteEstimate(${e.id})">Delete</button>
+        </div>
+      </div>`;
+    }).join('');
+  }
 
-// ---- HEADER TOTAL ----
-function updateHeaderTotal() {
-  let subtotal = lineItems.reduce((s, i) => s + i.lineTotal, 0);
-  const total = subtotal * (1 + markup / 100);
-  document.getElementById('header-total').textContent = '$' + total.toFixed(2);
-}
+  // RENDER SUMMARY
+  function renderSummary() {
+    const customer = document.getElementById('estimate-name').value || 'Unnamed Estimate';
+    document.getElementById('summary-customer').textContent = customer;
+    document.getElementById('summary-date').textContent = new Date().toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+    let laborTotal = 0, materialTotal = 0;
+    const lineEl = document.getElementById('summary-line-items');
+    if (lineItems.length === 0) {
+      lineEl.innerHTML = `<div class="empty" style="padding:20px 0;"><div class="empty-text">No line items added yet.</div></div>`;
+    } else {
+      lineEl.innerHTML = lineItems.map(item => {
+        laborTotal    += item.labor    * item.qty;
+        materialTotal += item.material * item.qty;
+        return `<div class="summary-row">
+          <span>${item.qty > 1 ? item.qty + '× ' : ''}${item.name}</span>
+          <span>$${item.lineTotal.toFixed(2)}</span>
+        </div>`;
+      }).join('');
+    }
+    const subtotal  = laborTotal + materialTotal;
+    const markupAmt = subtotal * (markup / 100);
+    document.getElementById('sum-labor').textContent      = '$' + laborTotal.toFixed(2);
+    document.getElementById('sum-materials').textContent  = '$' + materialTotal.toFixed(2);
+    document.getElementById('sum-subtotal').textContent   = '$' + subtotal.toFixed(2);
+    document.getElementById('sum-markup-pct').textContent = markup;
+    document.getElementById('sum-markup').textContent     = '$' + markupAmt.toFixed(2);
+    document.getElementById('sum-total').textContent      = '$' + (subtotal + markupAmt).toFixed(2);
+  }
 
-// ---- CLEAR ----
-function clearEstimate() {
-  if (!confirm('Clear all line items from this estimate?')) return;
-  lineItems = [];
-  document.getElementById('estimate-name').value = '';
-  renderLineItems();
-  updateHeaderTotal();
-  switchTabDirect('estimate');
-}
+  // HEADER TOTAL
+  function updateHeaderTotal() {
+    const subtotal = lineItems.reduce((s, i) => s + i.lineTotal, 0);
+    document.getElementById('header-total').textContent = '$' + (subtotal * (1 + markup / 100)).toFixed(2);
+  }
 
-// ---- INIT ----
-renderSavedList();
-document.getElementById('summary-date').textContent = new Date().toLocaleDateString('en-US', {weekday:'long', year:'numeric', month:'long', day:'numeric'});
+  // CLEAR
+  function clearEstimate() {
+    if (!confirm('Clear all line items from this estimate?')) return;
+    lineItems = [];
+    document.getElementById('estimate-name').value = '';
+    renderLineItems();
+    updateHeaderTotal();
+    switchTabDirect('estimate');
+  }
+
+  // INIT
+  renderSavedList();
+  renderHistory();
+  initGeolocation();
 </script>
+
 </body>
 </html>
