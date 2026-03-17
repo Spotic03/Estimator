@@ -15,9 +15,11 @@
     --surface2: #242424;
     --surface3: #2e2e2e;
     --accent: #f5a623;
+    --accent2: #e8891a;
     --text: #f0ede8;
     --muted: #888;
     --danger: #e05c5c;
+    --success: #5cb88a;
     --border: #333;
     --radius: 12px;
   }
@@ -30,6 +32,7 @@
     padding-bottom: 100px;
   }
 
+/* HEADER */
 .header {
 background: var(–bg);
 padding: 52px 20px 16px;
@@ -41,12 +44,19 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 }
-.logo { font-family: ‘Bebas Neue’, sans-serif; font-size: 28px; letter-spacing: 2px; color: var(–accent); line-height: 1; }
+.logo {
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 28px;
+letter-spacing: 2px;
+color: var(–accent);
+line-height: 1;
+}
 .logo span { color: var(–text); }
 .header-total { text-align: right; }
 .header-total .label { font-size: 10px; color: var(–muted); text-transform: uppercase; letter-spacing: 1px; }
 .header-total .amount { font-family: ‘Bebas Neue’, sans-serif; font-size: 26px; color: var(–accent); letter-spacing: 1px; }
 
+/* TABS */
 .tabs {
 display: flex;
 background: var(–surface);
@@ -70,9 +80,11 @@ transition: all 0.2s;
 }
 .tab.active { background: var(–accent); color: #000; font-weight: 600; }
 
+/* SECTIONS */
 .section { display: none; padding: 16px; }
 .section.active { display: block; }
 
+/* CARDS */
 .card {
 background: var(–surface);
 border-radius: var(–radius);
@@ -89,6 +101,7 @@ text-transform: uppercase;
 margin-bottom: 12px;
 }
 
+/* INPUTS */
 input, select {
 width: 100%;
 background: var(–surface2);
@@ -116,6 +129,7 @@ font-weight: 500;
 .field { margin-bottom: 12px; }
 .field:last-child { margin-bottom: 0; }
 
+/* BUTTONS */
 .btn {
 display: block;
 width: 100%;
@@ -128,15 +142,17 @@ font-weight: 600;
 cursor: pointer;
 text-align: center;
 transition: all 0.15s;
+text-decoration: none;
 }
 .btn:active { transform: scale(0.97); }
-.btn-primary  { background: var(–accent); color: #000; }
-.btn-secondary{ background: var(–surface2); color: var(–text); border: 1px solid var(–border); }
-.btn-danger   { background: transparent; color: var(–danger); border: 1px solid var(–danger); font-size: 13px; padding: 8px 12px; }
-.btn-ghost    { background: transparent; color: var(–accent); border: 1px solid var(–accent); }
-.btn-green    { background: transparent; color: #5cb88a; border: 1px solid #5cb88a; font-size: 13px; padding: 8px 12px; }
-.btn-sm       { padding: 9px 14px; font-size: 13px; width: auto; display: inline-block; }
+.btn-primary   { background: var(–accent); color: #000; }
+.btn-secondary { background: var(–surface2); color: var(–text); border: 1px solid var(–border); }
+.btn-danger    { background: transparent; color: var(–danger); border: 1px solid var(–danger); font-size: 13px; padding: 8px 12px; }
+.btn-ghost     { background: transparent; color: var(–accent); border: 1px solid var(–accent); }
+.btn-success   { background: transparent; color: var(–success); border: 1px solid var(–success); font-size: 13px; padding: 8px 12px; }
+.btn-sm        { padding: 9px 14px; font-size: 13px; width: auto; display: inline-block; }
 
+/* RETAILER BUTTONS */
 .retailer-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 4px; }
 .retailer-btn {
 display: flex; align-items: center; justify-content: center; gap: 6px;
@@ -148,6 +164,7 @@ cursor: pointer; border: none; transition: opacity 0.15s;
 .btn-homedepot { background: #F96302; color: #fff; }
 .geo-note { font-size: 11px; color: var(–muted); text-align: center; margin-top: 4px; }
 
+/* LINE ITEMS */
 .line-item {
 background: var(–surface2);
 border-radius: 10px;
@@ -160,11 +177,12 @@ align-items: flex-start;
 gap: 10px;
 }
 .line-item-info { flex: 1; min-width: 0; }
-.line-item-name { font-weight: 600; font-size: 14px; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.line-item-detail { font-size: 12px; color: var(–muted); margin-top: 4px; }
+.line-item-name { font-weight: 600; font-size: 14px; margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.line-item-detail { font-size: 12px; color: var(–muted); }
 .line-item-price { font-family: ‘Bebas Neue’, sans-serif; font-size: 20px; color: var(–accent); white-space: nowrap; }
 .line-item-actions { display: flex; flex-direction: column; gap: 4px; align-items: flex-end; }
 
+/* SAVED ITEMS */
 .saved-item {
 background: var(–surface2);
 border-radius: 10px;
@@ -181,6 +199,7 @@ gap: 10px;
 .saved-item-detail { font-size: 12px; color: var(–muted); margin-top: 2px; }
 .saved-item-actions { display: flex; gap: 6px; flex-shrink: 0; }
 
+/* HISTORY CARDS */
 .past-estimate {
 background: var(–surface2);
 border-radius: 10px;
@@ -192,48 +211,64 @@ border: 1px solid var(–border);
 .past-estimate-name { font-weight: 600; font-size: 15px; flex: 1; min-width: 0; padding-right: 10px; }
 .past-estimate-total { font-family: ‘Bebas Neue’, sans-serif; font-size: 22px; color: var(–accent); white-space: nowrap; }
 .past-estimate-meta { font-size: 12px; color: var(–muted); margin-bottom: 10px; }
-.past-estimate-actions { display: flex; gap: 8px; }
+.past-estimate-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 
+/* SUMMARY */
 .summary-row {
 display: flex; justify-content: space-between; align-items: center;
 padding: 10px 0; border-bottom: 1px solid var(–border); font-size: 14px;
 }
 .summary-row:last-child { border-bottom: none; }
-.summary-row.total { font-family: ‘Bebas Neue’, sans-serif; font-size: 22px; letter-spacing: 1px; color: var(–accent); padding-top: 14px; }
+.summary-row.total {
+font-family: ‘Bebas Neue’, sans-serif; font-size: 22px;
+letter-spacing: 1px; color: var(–accent); padding-top: 14px;
+}
 .summary-label { color: var(–muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; }
 
+/* MARKUP SLIDER */
 .markup-display { font-family: ‘Bebas Neue’, sans-serif; font-size: 40px; color: var(–accent); text-align: center; line-height: 1; margin: 8px 0; }
 input[type=range] { -webkit-appearance: none; background: var(–surface3); height: 6px; border-radius: 3px; padding: 0; border: none; }
 input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50%; background: var(–accent); cursor: pointer; }
 
+/* EMPTY STATE */
 .empty { text-align: center; padding: 40px 20px; color: var(–muted); }
 .empty-icon { font-size: 40px; margin-bottom: 10px; }
 .empty-text { font-size: 14px; }
 
-.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75); z-index: 200; align-items: flex-end; }
+/* MODALS */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 200; align-items: flex-end; }
 .modal-overlay.open { display: flex; }
-.modal { background: var(–surface); border-radius: 20px 20px 0 0; padding: 20px 20px 40px; width: 100%; max-height: 90dvh; overflow-y: auto; border-top: 1px solid var(–border); }
+.modal {
+background: var(–surface); border-radius: 20px 20px 0 0;
+padding: 20px 20px 40px; width: 100%; max-height: 90dvh;
+overflow-y: auto; border-top: 1px solid var(–border);
+}
 .modal-handle { width: 36px; height: 4px; background: var(–border); border-radius: 2px; margin: 0 auto 18px; }
 .modal-title { font-family: ‘Bebas Neue’, sans-serif; font-size: 22px; letter-spacing: 1px; margin-bottom: 16px; }
 
+/* BADGES */
 .badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
 .badge-labor    { background: #1e3a5f; color: #7eb8f7; }
 .badge-material { background: #2d2010; color: var(–accent); }
 
+/* ESTIMATE NAME BAR */
 .estimate-name-bar {
 background: var(–surface); border-radius: var(–radius);
 padding: 12px 14px; margin-bottom: 12px; border: 1px solid var(–border);
 display: flex; align-items: center; gap: 10px;
 }
 .estimate-name-bar input { background: transparent; border: none; font-size: 16px; font-weight: 600; padding: 0; }
+.estimate-name-bar input:focus { box-shadow: none; border: none; }
 .estimate-name-bar .icon { color: var(–accent); font-size: 18px; flex-shrink: 0; }
 
 .tag { font-size: 11px; color: var(–muted); background: var(–surface3); border-radius: 5px; padding: 2px 7px; }
 .section-header { font-family: ‘Bebas Neue’, sans-serif; font-size: 16px; letter-spacing: 2px; color: var(–muted); text-transform: uppercase; margin: 16px 0 8px; }
+.divider { height: 1px; background: var(–border); margin: 14px 0; }
 
+/* TOAST */
 .toast {
 position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(20px);
-background: #5cb88a; color: #000; font-weight: 600; font-size: 13px;
+background: var(–success); color: #000; font-weight: 600; font-size: 13px;
 padding: 10px 20px; border-radius: 30px; z-index: 999;
 opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap;
 }
@@ -396,7 +431,7 @@ opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap;
 <div id="tab-history" class="section">
   <div class="card">
     <div class="card-title">Saved Estimates</div>
-    <p style="font-size:13px; color:var(--muted);">Tap View to see the full breakdown, or Load to bring it back into the estimate.</p>
+    <p style="font-size:13px; color:var(--muted);">Tap View for full breakdown, or Load to bring one back into the estimator.</p>
   </div>
   <div id="history-list"></div>
 </div>
@@ -427,7 +462,7 @@ opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap;
     <div class="modal-title" id="hmodal-name">Estimate</div>
     <div style="font-size:12px; color:var(--muted); margin-bottom:14px;" id="hmodal-date"></div>
     <div id="hmodal-items"></div>
-    <div style="height:1px; background:var(--border); margin:14px 0;"></div>
+    <div class="divider"></div>
     <div id="hmodal-totals"></div>
     <div style="display:flex; gap:8px; margin-top:16px;">
       <button class="btn btn-primary" style="flex:1" onclick="loadHistoryEstimate()">Load into Estimate</button>
@@ -447,6 +482,7 @@ opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap;
   let selectedHistoryEstimate = null;
   let userCoords = null;
 
+  // TOAST
   function showToast(msg) {
     const t = document.getElementById('toast');
     t.textContent = msg;
@@ -556,7 +592,7 @@ opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap;
     const labor    = parseFloat(document.getElementById('item-labor').value)    || 0;
     const material = parseFloat(document.getElementById('item-material').value) || 0;
     if (!name) { alert('Enter an item name to save.'); return; }
-    if (savedItems.find(s => s.name.toLowerCase() === name.toLowerCase())) { alert('Already saved.'); return; }
+    if (savedItems.find(s => s.name.toLowerCase() === name.toLowerCase())) { alert('An item with this name is already saved.'); return; }
     savedItems.push({ id: Date.now(), name, type, labor, material });
     localStorage.setItem('volt_saved', JSON.stringify(savedItems));
     showToast(`"${name}" saved to library!`);
@@ -595,7 +631,7 @@ opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap;
     selectedSavedItem = null;
   }
 
-  // SAVE ESTIMATE
+  // SAVE ESTIMATE TO HISTORY
   function saveEstimate() {
     if (lineItems.length === 0) { alert('Add at least one line item before saving.'); return; }
     const name = document.getElementById('estimate-name').value.trim() || 'Unnamed Estimate';
@@ -605,8 +641,7 @@ opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap;
       id: Date.now(), name,
       date: new Date().toISOString(),
       lineItems: JSON.parse(JSON.stringify(lineItems)),
-      markup, subtotal,
-      markupAmt,
+      markup, subtotal, markupAmt,
       total: subtotal + markupAmt
     });
     localStorage.setItem('volt_estimates', JSON.stringify(savedEstimates));
@@ -649,8 +684,8 @@ opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap;
     const e = selectedHistoryEstimate;
     lineItems = JSON.parse(JSON.stringify(e.lineItems));
     markup = e.markup;
-    document.getElementById('estimate-name').value    = e.name;
-    document.getElementById('markup-slider').value    = markup;
+    document.getElementById('estimate-name').value        = e.name;
+    document.getElementById('markup-slider').value        = markup;
     document.getElementById('markup-display').textContent = markup + '%';
     renderLineItems();
     updateHeaderTotal();
@@ -669,8 +704,7 @@ opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap;
     selectedHistoryEstimate = null;
   }
 
-  // RENDER LINE ITEMS
-  // Only qty shown in detail — NO labor or material cost breakdown on the card
+  // RENDER LINE ITEMS — qty shown only, no cost breakdown on the card
   function renderLineItems() {
     const el = document.getElementById('line-items-list');
     if (lineItems.length === 0) {
@@ -744,7 +778,7 @@ opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap;
         <div class="past-estimate-meta">${dateStr} &nbsp;·&nbsp; ${n} item${n !== 1 ? 's' : ''} &nbsp;·&nbsp; ${e.markup}% markup</div>
         <div class="past-estimate-actions">
           <button class="btn btn-primary btn-sm" onclick="viewEstimate(${e.id})">View</button>
-          <button class="btn btn-green btn-sm" onclick="loadAndGoToEstimate(${e.id})">Load</button>
+          <button class="btn btn-success btn-sm" onclick="loadAndGoToEstimate(${e.id})">Load</button>
           <button class="btn btn-danger btn-sm" onclick="deleteEstimate(${e.id})">Delete</button>
         </div>
       </div>`;
